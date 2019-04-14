@@ -67,7 +67,7 @@ export default {
   },
   data: function() {
     return {
-      backgroundImg: "/static/img/main-bg.jpg",
+      backgroundImg: "./static/img/background.jpg",
       headingTitle: "We solve your problems",
       headingText:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias magnam maiores possimus quo totam odio quibusdam voluptate ea doloribus nemo odit facilis reprehenderit, architecto laborum, laudantium omnis repellendus tempora nam?"
