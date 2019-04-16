@@ -2,22 +2,44 @@
   <section class="solutions container">
     <h3 class="solutions__title">{{title}}</h3>
     <div class="solutions__wrapper row">
-      <the-solution-item
+      <solution-item
         :solutionsStorage="cards"
         :key="solutionsStorage.item"
         v-for="(cards, solutionsStorage) in solutionsStorage"
-      ></the-solution-item>
+      ></solution-item>
     </div>
   </section>
 </template>
 
 
+<style lang="scss">
+@import "../assets/scss/variables.scss";
+@import "../assets/scss/fonts.scss";
+
+.solutions {
+  margin-bottom: 80px;
+  &__title {
+    @include primaryTitle;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 32px;
+  }
+  &__wrapper {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+</style>
+
+
 <script>
-import TheSolutionItem from "./TheSolutionItem";
+import SolutionItem from "./SolutionItem";
 export default {
   name: "TheSolutions",
   components: {
-    TheSolutionItem
+    SolutionItem
   },
   data() {
     return {
@@ -59,23 +81,3 @@ export default {
 };
 </script>
 
-
-<style lang="scss">
-.solutions {
-  margin-bottom: 80px;
-}
-.solutions__title {
-  font-family: "PT Sans", "Helvetica", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  display: block;
-  margin-bottom: 32px;
-}
-.solutions__wrapper {
-  width: 100%;
-  justify-content: space-around;
-}
-</style>

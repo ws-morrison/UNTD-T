@@ -3,25 +3,25 @@
 </template>
 
 
-<script>
-export default {
-  name: "TheMoreButton"
-};
-</script>
-
-
 <style lang="scss">
+@import "../assets/scss/variables.scss";
+@import "../assets/scss/fonts.scss";
 .more-button {
+  @include smallText;
   display: block;
   margin: 0 auto;
   width: 230px;
-  font-family: "PT Sans";
-  font-size: 14px;
-  line-height: normal;
-  text-align: center;
   padding: 18px 45px;
   color: #000;
-  border: 1px solid #85b657;
+  border: 1px solid $accientColor;
   border-radius: 4px;
+  text-align: center;
 }
 </style>
+
+
+<script>
+export default {
+  name: "LoadButton"
+};
+</script>

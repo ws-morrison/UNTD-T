@@ -3,28 +3,56 @@
     <h3 class="products__title">{{title}}</h3>
     <p class="products__lead">{{lead}}</p>
     <div class="products__wrapper row">
-      <the-products-card
+      <products-item
         :productsStorage="cards"
         :key="productsStorage.item"
         v-for="(cards, productsStorage) in productsStorage"
-      ></the-products-card>
+      ></products-item>
     </div>
-    <the-more-button></the-more-button>
+    <load-button></load-button>
   </section>
 </template>
 
 
+<style lang="scss">
+@import "../assets/scss/variables.scss";
+@import "../assets/scss/fonts.scss";
+.products {
+  margin-bottom: 80px;
+
+  &__title {
+    @include primaryTitle;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  &__lead {
+    @include primaryText;
+  }
+
+  &__wrapper {
+    width: 100%;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+</style>
+
 <script>
-import TheProductsCard from "./TheProductsCard";
-import TheMoreButton from "./TheMoreButton";
+import ProductsItem from "./ProductsItem";
+import LoadButton from "./LoadButton";
 
 export default {
   name: "TheProducts",
   components: {
-    TheProductsCard,
-    TheMoreButton
+    ProductsItem,
+    LoadButton
   },
   data() {
+    // $storage
     return {
       title: "Esodales scelerisque elementum quis purus.",
       lead:
@@ -103,24 +131,3 @@ export default {
 };
 </script>
 
-
-<style lang="scss">
-.products {
-  margin-bottom: 80px;
-}
-.products__title {
-  font-family: "PT Sans", "Helvetica", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  display: block;
-  margin-bottom: 32px;
-}
-.products__wrapper {
-  width: 100%;
-  justify-content: space-around;
-  align-items: baseline;
-}
-</style>

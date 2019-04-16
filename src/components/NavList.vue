@@ -1,20 +1,42 @@
 <template>
-  <ul class="drop-menu__list row">
-    <the-nav-item :links="item" :key="links.linkItem" v-for="(item, links) in links"></the-nav-item>
+  <ul class="navbar__list row">
+    <nav-item :links="item" :key="links.linkItem" v-for="(item, links) in links"></nav-item>
   </ul>
 </template>
 
 
-<script>
-import TheNavItem from "./TheNavItem";
+<style lang="scss">
+@import "../assets/scss/variables.scss";
+.navbar__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 768px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  @media (max-width: $laptop) {
+    flex-direction: column;
+    text-align: center;
+    max-width: unset;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+</style>
 
+
+
+<script>
+import NavItem from "./NavItem";
 export default {
-  name: "TheNav",
+  name: "NavList",
   components: {
-    TheNavItem
+    NavItem
   },
   data() {
     return {
+      // $storage
       links: [
         {
           linkItem: {
@@ -58,21 +80,3 @@ export default {
   }
 };
 </script>
-
-
-<style lang="scss">
-@mixin primaryText {
-  font-family: "PT Sans", "Helvetica", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-}
-@media (max-width: 1024px) {
-  .show {
-    display: block;
-  }
-
-  .hidden {
-    display: none;
-  }
-}
-</style>

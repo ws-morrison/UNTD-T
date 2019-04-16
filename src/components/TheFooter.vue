@@ -2,27 +2,59 @@
   <footer class="footer">
     <div class="container">
       <ul class="additional-list">
-        <the-additional-item
+        <additional-item
           :additionalStorage="item"
           :key="additionalStorage.item"
           v-for="(item, additionalStorage) in additionalStorage"
-        ></the-additional-item>
+        ></additional-item>
       </ul>
-      <the-social-list></the-social-list>
+      <social-list></social-list>
     </div>
     <span class="footer__copyright">Copright © 1999 - 2019</span>
   </footer>
 </template>
 
 
+<style lang="scss">
+@import "../assets/scss/variables.scss";
+@import "../assets/scss/fonts.scss";
+.footer {
+  background-color: $primaryColor;
+  padding-top: 40px;
+  padding-bottom: 54px;
+}
+
+.footer__copyright {
+  @include primaryTextBold;
+  color: $white;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.additional-list {
+  display: flex;
+  width: 35%;
+  min-width: 300px;
+  justify-content: space-around;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  margin-bottom: 25px;
+}
+</style>
+
+
+
 <script>
-import TheAdditionalItem from "./TheAdditionalItem";
-import TheSocialList from "./TheSocialList";
+import AdditionalItem from "./AdditionalItem";
+import SocialList from "./SocialList";
 export default {
   name: "TheFooter",
   components: {
-    TheAdditionalItem,
-    TheSocialList
+    AdditionalItem,
+    SocialList
   },
   data() {
     return {
@@ -50,36 +82,3 @@ export default {
   }
 };
 </script>
-
-
-<style lang="scss">
-.footer {
-  background-color: #1d2741;
-  padding-top: 40px;
-  padding-bottom: 54px;
-}
-
-.footer__copyright {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: normal;
-  color: #ffffff;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-}
-.additional-list {
-  display: flex;
-  width: 35%;
-  min-width: 300px;
-  justify-content: space-around;
-  justify-items: center;
-  margin: 0;
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-  margin-bottom: 25px;
-}
-</style>

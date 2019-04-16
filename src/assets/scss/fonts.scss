@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|PT+Sans:400,700');
+
+
+@mixin primaryText {
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+}
+
+
+@mixin primaryTextBold {
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: normal;
+}
+
+
+@mixin smallText {
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+}
+
+@mixin bigText {
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+}
+
+@mixin primaryTitle {
+  font-family: "PT Sans", "Helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+}
+
+
+@mixin mainTitle {
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: normal;
+}

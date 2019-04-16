@@ -1,15 +1,15 @@
 <template>
   <a href class="worldwide__item">
-    <img :src="companyList.item.img" alt class="worldwide__img">
+    <img :src="partners.item.img" alt class="worldwide__img">
   </a>
 </template>
 
 
 <script>
 export default {
-  name: "TheWorldwideItem",
+  name: "WorldwideItem",
   props: {
-    companyList: {
+    partners: {
       type: Object
     }
   }
@@ -18,6 +18,7 @@ export default {
 
 
 <style lang="scss">
+@import "../assets/scss/variables.scss";
 .worldwide__item {
   display: block;
   margin-bottom: 50px;

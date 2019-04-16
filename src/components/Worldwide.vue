@@ -12,25 +12,25 @@
     </div>
 
     <div class="worldwide__list">
-      <the-worldwide-item
-        :companyList="item"
-        :key="companyList.item"
-        v-for="(item, companyList) in companyList"
-      ></the-worldwide-item>
+      <worldwide-item
+        :partners="item"
+        :key="partners.item"
+        v-for="(item, partners) in partners"
+      ></worldwide-item>
     </div>
   </section>
 </template>
 
 <script>
-import TheWorldwideItem from "./TheWorldwideItem";
+import WorldwideItem from "./WorldwideItem";
 export default {
-  name: "TheWorldwide",
+  name: "Worldwide",
   components: {
-    TheWorldwideItem
+    WorldwideItem
   },
   data() {
     return {
-      companyList: [
+      partners: [
         {
           item: {
             link: "",
@@ -69,6 +69,7 @@ export default {
 
 
 <style lang="scss">
+@import "../assets/scss/variables.scss";
 .worldwide {
     margin-bottom: 70px;
 }

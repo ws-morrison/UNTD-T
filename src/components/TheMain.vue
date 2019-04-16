@@ -1,25 +1,23 @@
 <template>
   <main class="main">
-    <the-solutions></the-solutions>
-    <the-products></the-products>
-    <the-worldwide></the-worldwide>
+    <solutions></solutions>
+    <products></products>
+    <worldwide></worldwide>
   </main>
 </template>
 
 
 <script>
-import TheSolutions from "./TheSolutions";
-import TheProducts from "./TheProducts";
-import TheProductsCard from "./TheProductsCard";
-import TheWorldwide from "./TheWorldwide";
+import Solutions from "./Solutions";
+import Products from "./Products";
+import Worldwide from "./Worldwide";
 
 export default {
   name: "TheMain",
   components: {
-    TheSolutions,
-    TheProducts,
-    TheProductsCard,
-    TheWorldwide
+    Solutions,
+    Products,
+    Worldwide
   }
 };
 </script>
